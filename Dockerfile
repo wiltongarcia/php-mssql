@@ -30,5 +30,5 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug
 # Install Redis
 RUN pecl install redis && docker-php-ext-enable redis
 
-RUN groupadd -r php -g 1000 && useradd -u 1000 -r -g php -m -d /var/www/hml -s /sbin/nologin -c "App user" php 
+RUN groupadd -r php -g 1000 && useradd -u 1000 -r -g php -m -d /var/www/html -s /sbin/nologin -c "App user" php 
 
