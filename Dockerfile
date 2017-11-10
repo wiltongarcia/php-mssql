@@ -26,7 +26,7 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug
 RUN pecl install redis && docker-php-ext-enable redis
 
 RUN apt-get install -y locales \
-    && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+    && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
     && locale-gen
 
 RUN groupadd -r php -g 1000 && useradd -u 1000 -r -g php -m -d /var/www/html -s /sbin/nologin -c "App user" php 
